@@ -1,0 +1,72 @@
+body {
+  max-width: 100%;
+  height: 100vh;
+  background-color: #f5fcff;
+  padding: 0;
+  margin: 0;
+  animation: sunset-background 8s linear 1 reverse; 
+}
+.wrapper {
+  margin: 0 auto;
+} 
+.sun {
+  height: 256px;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: url(../img/sun.png) top right / contain no-repeat;
+  animation: sunset-sun 8s linear 1 reverse;
+}
+.cloud {
+  position: relative;
+  top: 50px;
+  height: 200px;
+  z-index: 1;
+  background: url(../img/cloud.png) 50% / auto 100% repeat-x;
+}
+.deer {
+  height: 500px;
+  position: relative;
+  top: 100px;
+  left: 0;
+  background: url(../img/deer.png) center / contain no-repeat;
+}
+.grass {
+  height: 150px;
+  width: 100%;
+  position: absolute;
+  bottom: 0px;
+  left: 0; 
+  background: url(../img/grass.png)  50% / auto 100% repeat-x;
+}
+.butterfly {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  right: 50%;
+  bottom: 50%;
+  z-index: 2;
+  background: url(../img/butterfly.png) center / contain no-repeat;
+  transform: translate3d(300px,50px,50px) rotate3d(20,0,10,65deg);
+  transition: all 5s ease 5s;
+}
+@keyframes sunset-sun {
+  0% {
+    bottom: 0;
+  }
+  100% {
+    top: 70%;
+  }
+}
+@keyframes sunset-background {
+  0% {
+    background: #f5fcff;
+  }
+  50% {
+    background: #F0F9F7; 
+  }
+  100% {
+    background: #212020;  
+  }
+} 
